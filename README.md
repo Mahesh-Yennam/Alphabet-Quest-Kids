@@ -5,6 +5,7 @@
 </p>
 
 <p align="center">
+  <a href="https://mahesh-yennam.github.io/Alphabet-Quest-Kids/"><img src="https://img.shields.io/badge/Play_Live-Alphabet_Quest_Kids-0284c7?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Play Live" /></a>
   <a href="https://mahesh-yennam.github.io/Gamility/"><img src="https://img.shields.io/badge/Live_Portal-Gamility-0ea5e9?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Gamility Portal" /></a>
   <img src="https://img.shields.io/badge/Kids-Educational_Quiz-f59e0b?style=for-the-badge&logo=target" alt="Kids Educational" />
   <img src="https://img.shields.io/badge/Audio-Web_Audio_API-10b981?style=for-the-badge&logo=sound" alt="Web Audio" />
