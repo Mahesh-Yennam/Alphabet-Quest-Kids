@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="30%" cy="25%" r="75%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="60%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </radialGradient>
+
+    <!-- Toy Block 3D Face Gradients -->
+    <linearGradient id="blockFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#e11d48" />
+    </linearGradient>
+    <linearGradient id="blockTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base Rounded Container -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Drop Shadow -->
+  <ellipse cx="32" cy="52" rx="18" ry="5" fill="#0c4a6e" fill-opacity="0.5" />
+
+  <!-- Toy Block Top Bevel -->
+  <path d="M18 20 L32 12 L46 20 L32 26 Z" fill="url(#blockTop)" />
+
+  <!-- Toy Block Main Front Face -->
+  <path d="M18 20 L32 26 L46 20 L46 44 L32 50 L18 44 Z" fill="url(#blockFront)" />
+
+  <!-- Front Face Bevel Highlight Line -->
+  <path d="M32 26 L32 50" stroke="#be123c" stroke-width="1.5" />
+
+  <!-- Letter 'A' On Left Facet -->
+  <text x="25" y="39" font-family="'Outfit', sans-serif" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle">A</text>
+
+  <!-- Letter 'B' On Right Facet -->
+  <text x="39" y="39" font-family="'Outfit', sans-serif" font-weight="900" font-size="14" fill="#fef08a" text-anchor="middle">B</text>
+
+  <!-- Little Joyful Stars -->
+  <circle cx="14" cy="16" r="2.5" fill="#fde047" />
+  <circle cx="50" cy="15" r="2" fill="#fbcfe8" />
+  <circle cx="52" cy="48" r="2.2" fill="#fde047" />
+</svg>

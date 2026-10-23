@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFQ8M0VSFN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RFQ8M0VSFN');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Alphabet Quest Kids — Fun Spelling & Alphabet Quiz | Gamility</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Play Alphabet Quest Kids! A colorful 4, 6, and 8-letter spelling and alphabet quiz for children. Learn missing letters, practice uppercase and lowercase ABCs, and enjoy fun word quests!">
+  <meta name="keywords" content="alphabet quest kids, alphabet game, kids spelling game, educational quiz, phonics game, learn abcs, gamility games">
+  <meta name="author" content="Gamility">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mahesh-yennam.github.io/Gamility/games/alphabet-quest-kids/index.html">
+
+  <!-- OpenGraph -->
+
+  <!-- Favicon & PWA -->
+    <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alphabet Quest Kids — Fun Spelling & Alphabet Quiz | Gamility">
+  <meta property="og:description" content="Play Alphabet Quest Kids! A colorful 4, 6, and 8-letter spelling and alphabet quiz for children. Learn missing letters, practice uppercase and lowercase ABCs, and enjoy fun word quests!">
+  <meta property="og:image" content="preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Alphabet Quest Kids — Fun Spelling & Alphabet Quiz | Gamility">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alphabet Quest Kids — Fun Spelling & Alphabet Quiz | Gamility">
+  <meta name="twitter:description" content="Play Alphabet Quest Kids! A colorful 4, 6, and 8-letter spelling and alphabet quiz for children. Learn missing letters, practice uppercase and lowercase ABCs, and enjoy fun word quests!">
+  <meta name="twitter:image" content="preview.png">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0284c7">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       TOP GAMILITY RETURN RIBBON
+       ========================================================================= -->
+  <header class="top-nav-ribbon" role="banner">
+    <div class="ribbon-container">
+      <div class="ribbon-left">
+        <a href="https://mahesh-yennam.github.io/Gamility/" class="ribbon-brand" title="Gamility Home" aria-label="Gamility Home">
+          <svg width="22" height="22" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M20 4L4 12V28L20 36L36 28V12L20 4Z" stroke="#f59e0b" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M20 12L12 16V24L20 28L28 24V16L20 12Z" fill="#ec4899" fill-opacity="0.85"/>
+            <circle cx="20" cy="20" r="3" fill="#ffffff"/>
+          </svg>
+          <span class="brand-name">Gamility</span>
+          <span class="brand-badge">Kids</span>
+        </a>
+      </div>
+      <div class="ribbon-right">
+        <button type="button" class="btn-ribbon-icon" id="btnToggleAudio" aria-label="Toggle Sound" title="Toggle Sound">
+          <span id="audioIcon">🔊</span>
+        </button>
+        <a href="https://mahesh-yennam.github.io/Gamility/games.html" class="ribbon-back-btn" title="Back to All Games">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Back to Games</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MAIN ARCADE WRAPPER & PLAYROOM VIEWPORT
+       ========================================================================= -->
+  <main class="arcade-wrapper">
+    <div class="game-viewport" id="gameViewport">
+      
+      <!-- Top Toyroom Toolbar: Mode, Tier, Case, Audio -->
+      <nav class="playroom-controls-bar">
+        <!-- Mode Switcher: Words vs ABC Sequence -->
+        <div class="control-segment-pill" role="tablist" aria-label="Quiz Mode">
+          <button type="button" class="btn-pill-mode active" id="btnModeWords" title="Word Spelling Quest">
+            <span>🦁 Words</span>
+          </button>
+          <button type="button" class="btn-pill-mode" id="btnModeABC" title="Alphabet Order Sequence">
+            <span>🔤 ABCs</span>
+          </button>
+        </div>
+
+        <!-- Tier Switcher: 4, 6, 8 Letters -->
+        <div class="control-tier-group" aria-label="Quiz Length Tier">
+          <button type="button" class="btn-tier active" data-tier="4" id="btnTier4">4</button>
+          <button type="button" class="btn-tier" data-tier="6" id="btnTier6">6</button>
+          <button type="button" class="btn-tier" data-tier="8" id="btnTier8">8</button>
+        </div>
+
+        <!-- Case Toggle: UPPERCASE (ABC) vs lowercase (abc) -->
+        <button type="button" class="btn-case-toggle" id="btnToggleCase" title="Toggle Uppercase / Lowercase">
+          <span id="caseLabel">ABC</span>
+        </button>
+      </nav>
+
+      <!-- Sub-Bar: Stars / Attempts & Score -->
+      <div class="playroom-stats-bar">
+        <!-- Attempts / Hearts -->
+        <div class="stat-group">
+          <span class="stat-lbl">ATTEMPTS</span>
+          <div class="stars-container" id="starsContainer" aria-label="Attempts left">
+            <span class="star-icon active" id="star1">⭐</span>
+            <span class="star-icon active" id="star2">⭐</span>
+            <span class="star-icon active" id="star3">⭐</span>
+          </div>
+        </div>
+
+        <!-- Score & Streak -->
+        <div class="stat-group score-group">
+          <span class="stat-lbl">SCORE</span>
+          <div class="score-display">
+            <span class="score-val" id="hudScore">0</span>
+            <span class="streak-badge" id="hudStreakBadge" style="display: none;">3🔥</span>
+          </div>
+        </div>
+
+        <!-- Best Record -->
+        <div class="stat-group best-group">
+          <span class="stat-lbl">BEST</span>
+          <span class="best-val" id="hudBestScore">0</span>
+        </div>
+      </div>
+
+      <!-- Playroom Background Wallpaper Atmosphere -->
+      <div class="playroom-ambient-bg" aria-hidden="true">
+        <div class="wallpaper-stars"></div>
+        <div class="shelf-backdrop"></div>
+      </div>
+
+      <!-- Active Quiz Stage (Center Screen) -->
+      <section class="quiz-stage-area" id="quizStageArea">
+        
+        <!-- Word Illustration / Mascot Clue Card -->
+        <div class="clue-card" id="clueCard">
+          <div class="clue-icon-badge" id="clueIcon">🦁</div>
+          <div class="clue-text-box">
+            <span class="clue-category" id="clueCategory">ANIMAL</span>
+            <span class="clue-hint" id="clueHint">Fill the missing letter!</span>
+          </div>
+        </div>
+
+        <!-- Missing Letters Horizontal Grid -->
+        <div class="letter-slots-row" id="letterSlotsRow" aria-live="polite">
+          <!-- Letter slot blocks injected dynamically (4, 6, or 8 slots) -->
+        </div>
+
+        <!-- Gentle Feedback / Guidance Message -->
+        <div class="feedback-banner" id="feedbackBanner">
+          <span class="feedback-text" id="feedbackText">Tap a letter below to place it!</span>
+        </div>
+
+      </section>
+
+      <!-- Bottom Wooden Letter Deck Tray (Matching User Layout Reference) -->
+      <footer class="wooden-deck-shelf" id="woodenDeckShelf">
+        <div class="shelf-wood-lip"></div>
+        <div class="deck-cards-wrapper" id="deckCardsWrapper">
+          <!-- Selectable 3D Letter Cards injected dynamically -->
+        </div>
+      </footer>
+
+      <!-- Visual FX Overlay (Confetti burst, stars, floating scores) -->
+      <div class="fx-overlay" id="fxOverlay" aria-hidden="true"></div>
+
+      <!-- =========================================================================
+           OVERLAYS & MODALS
+           ========================================================================= -->
+
+      <!-- Start / Welcome Modal -->
+      <div class="game-overlay-modal start-overlay" id="startOverlay">
+        <div class="overlay-card">
+          <div class="overlay-icon-badge">
+            <span class="animated-icon">🧸</span>
+          </div>
+          <h1 class="overlay-title">ALPHABET QUEST!</h1>
+          <p class="overlay-tagline">Solve fun 4, 6, and 8-letter spelling puzzles! Tap letter blocks from the tray to complete each word or ABC sequence!</p>
+
+          <div class="mode-selection-preview">
+            <div class="mode-card-btn active" id="modalSelectWords">
+              <span class="m-icon">🦁</span>
+              <span class="m-title">Word Spelling</span>
+              <span class="m-desc">Cute animals, food & nature</span>
+            </div>
+            <div class="mode-card-btn" id="modalSelectABC">
+              <span class="m-icon">🔤</span>
+              <span class="m-title">Alphabet Order</span>
+              <span class="m-desc">Find missing ABC letters</span>
+            </div>
+          </div>
+
+          <div class="features-pill-row">
+            <span class="feature-tag">⭐ 3 Attempts</span>
+            <span class="feature-tag">🔠 ABC / abc</span>
+            <span class="feature-tag">💡 Learn & Play</span>
+          </div>
+
+          <button type="button" class="btn-play-primary" id="btnStartGame">
+            <span class="play-btn-glow"></span>
+            <span class="play-btn-text">START PLAYING!</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Game Over / Level Completed Modal -->
+      <div class="game-overlay-modal gameover-overlay" id="gameOverOverlay" style="display: none;">
+        <div class="overlay-card">
+          <div class="overlay-icon-badge badge-celebration">
+            <span id="goBadgeEmoji">🏆</span>
+          </div>
+          <h2 class="overlay-title" id="goTitle">AWESOME SPELLER!</h2>
+          <p class="overlay-tagline" id="goTagline">You solved great puzzles today!</p>
+
+          <div class="gameover-score-banner">
+            <div class="score-col">
+              <span class="col-lbl">FINAL SCORE</span>
+              <span class="col-val" id="goFinalScore">0</span>
+            </div>
+            <div class="score-divider"></div>
+            <div class="score-col">
+              <span class="col-lbl">BEST RECORD</span>
+              <span class="col-val highlight-gold" id="goBestScore">0</span>
+            </div>
+          </div>
+
+          <div class="gameover-stats-grid">
+            <div class="stat-card">
+              <span class="card-icon">🧩</span>
+              <span class="card-val" id="goPuzzlesSolved">0</span>
+              <span class="card-label">Puzzles Solved</span>
+            </div>
+            <div class="stat-card">
+              <span class="card-icon">🔥</span>
+              <span class="card-val" id="goMaxStreak">0</span>
+              <span class="card-label">Max Streak</span>
+            </div>
+            <div class="stat-card">
+              <span class="card-icon">⭐</span>
+              <span class="card-val" id="goStarsEarned">0</span>
+              <span class="card-label">Stars Earned</span>
+            </div>
+          </div>
+
+          <div class="overlay-actions">
+            <button type="button" class="btn-play-primary" id="btnPlayAgain">
+              <span class="play-btn-glow"></span>
+              <span class="play-btn-text">PLAY AGAIN</span>
+            </button>
+            <a href="https://mahesh-yennam.github.io/Gamility/games.html" class="btn-action-outline">
+              <span>MORE GAMES</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Game Logic Script -->
+  <script src="game.js"></script>
+</body>
+</html>

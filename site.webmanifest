@@ -1,0 +1,16 @@
+{
+  "name": "Alphabet Quest Kids — Fun Spelling & Alphabet Quiz",
+  "short_name": "Alphabet Quest",
+  "description": "An interactive 4, 6, and 8-letter spelling and alphabet quiz for children with colorful 3D blocks and learning assistance.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0ea5e9",
+  "theme_color": "#0284c7",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "64x64 128x128 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
